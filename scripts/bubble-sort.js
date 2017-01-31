@@ -1,5 +1,5 @@
-//compare a and b and swap if necessary
+let bubbleSort = ()=>{
+  return [];
+};
 
-
-
-array = [4,3,5,1,2];
+export default bubbleSort;
