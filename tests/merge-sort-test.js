@@ -5,4 +5,6 @@ describe('Merge sort tests', () => {
   it('should return an array', () => {
     expect(Array.isArray(mergeSort()));
   });
+
+
 });
