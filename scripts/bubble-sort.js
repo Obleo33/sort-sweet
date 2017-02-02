@@ -1,15 +1,10 @@
 let bubbleSort = (arr)=>{
   for (let i = 0; i<arr.length;i++){
-    let current = arr[i];
-    let next = arr[i+1];
-    if (next<current){
-      arr[i] = next;
-      arr[i+1] = current;
-    } else{
-      check(arr)
+    if (arr[i]>arr[i+1]){
+      arr.splice(i,0,arr.splice(i+1,1)[0]);
     }
   }
-  return(arr)
+  return (check(arr))
 }
 
 let check = (arr)=>{
@@ -20,6 +15,5 @@ let check = (arr)=>{
   }
   return(arr)
 }
-
 
 export default bubbleSort;
