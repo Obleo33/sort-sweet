@@ -1,26 +1,15 @@
-let newArray = [];
-
 let insertionSort = (arr)=>{
-  newArray.push(arr.shift());
-  arr.forEach((num)=>{
-    sort(num);
-  });
-  return newArray
-};
-
-let sort = (num)=>{
-  var placed = false;
-  newArray.forEach((ele,i,array)=>{
-    if(num<ele && placed === false){
-     placed=true;
-     newArray.splice(i,0,num)
+  arr.forEach((ele,i,array)=>{
+    let placed = false;
+    for (let j = 0; j < i;j++){
+      if(ele<array[j] && placed === false){
+        let splicedEle = arr.splice(i,1)
+        arr.splice(j,0,splicedEle[0])
+        placed = true;
+      }
     }
-    else if (placed === false && i===array.length-1) {
-      newArray.push(num);
-      placed = true;
-    }
-  });
-  return (newArray);
+  })
+  return arr
 };
 
 export default insertionSort;
