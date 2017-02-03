@@ -16,6 +16,13 @@ describe('Merge sort tests', () => {
     expect(filterMe).to.deep.equal(['a','b','c','d','e','f','g']);
   })
 
+  it('should retain a sorted array',()=>{
+    let filterMe = mergeSort([1,2,3,4]);
+    expect(filterMe).to.deep.equal([1,2,3,4]);
+  })
 
-
+  it('should retain a alphabetically sorted array',()=>{
+    let filterMe = mergeSort(['a','b','c','d']);
+    expect(filterMe).to.deep.equal(['a','b','c','d']);
+  })
 });
